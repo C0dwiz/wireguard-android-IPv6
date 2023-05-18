@@ -28,7 +28,7 @@ jobs:
         git clone --recurse-submodules https://github.com/CKopoer/wireguard-android.git
         cd wireguard-android
 
-        ./gradlew assemble
+        ./gradlew assembleRelease
         cd ui/build/outputs/apk
         echo "APP=$PWD" >> $GITHUB_ENV
     - name: Upload firmware directory
