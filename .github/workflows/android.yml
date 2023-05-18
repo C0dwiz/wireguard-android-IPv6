@@ -25,9 +25,9 @@ jobs:
       run:  |
         mkdir test
         cd test
-        git clone --recurse-submodules https://git.zx2c4.com/wireguard-android
+        git clone --recurse-submodules https://github.com/CKopoer/wireguard-android.git
         cd wireguard-android
-        git checkout 1.0.20220516
+
         ./gradlew assemble
         cd ui/build/outputs/apk
         echo "APP=$PWD" >> $GITHUB_ENV
