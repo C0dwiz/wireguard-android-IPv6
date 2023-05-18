@@ -97,12 +97,12 @@ public final class InetEndpoint {
                     // Prefer v4 endpoints over v6 to work around DNS64 and IPv6 NAT issues.
                     final InetAddress[] candidates = InetAddress.getAllByName(host);
                     InetAddress address = candidates[0];
-                    for (final InetAddress candidate : candidates) {
-                        if (candidate instanceof Inet4Address) {
-                            address = candidate;
-                            break;
-                        }
-                    }
+                    // for (final InetAddress candidate : candidates) {
+                    //     if (candidate instanceof Inet4Address) {
+                    //         address = candidate;
+                    //         break;
+                    //     }
+                    // }
                     resolved = new InetEndpoint(address.getHostAddress(), true, port);
                     lastResolution = Instant.now();
                 } catch (final UnknownHostException e) {
