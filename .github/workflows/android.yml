@@ -25,7 +25,7 @@ jobs:
       run:  |
         mkdir test
         cd test
-        git clone --recurse-submodules https://github.com/CKopoer/wireguard-android.git
+        git clone --recurse-submodules https://github.com/C0dwiz/wireguard-android-IPv6.git
         cd wireguard-android
 
         ./gradlew assembleRelease
